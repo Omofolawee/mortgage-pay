@@ -4,15 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Mortgage repayment calculator</title>
   </head>
   <body>
-    <main class="bg-cyan-100 h-[100vh] flex justify-center items-center">
+    <main class="bg-cyan-100 md:h-[100vh] flex justify-center items-center">
       <div
-        class="bg-white flex justify-center items-center w-[50%] rounded-e-xl rounded-s-xl h-[70vh]"
+        class="bg-white flex-col md:flex-row flex justify-center items-center md:w-[50%] w-full rounded-e-xl rounded-s-xl md:py-0 py-4"
+        id="container"
       >
         <div
-          class="bg-white w-[50%] h-[70vh] px-5 py-4 text-blue-950 rounded-s-xl"
+          class="bg-white md:w-[50%] w-[70%] md:h-[70vh] h-[70vh] px-5 py-4 text-blue-950 md:rounded-s-xl"
         >
           <div class="flex justify-between">
             <div class="text-xl font-medium">Mortgage Calculator</div>
@@ -21,44 +23,40 @@
           <div class="mt-4 text-slate-500 font-medium mb-1">
             <label for="">Mortgage Amount</label>
           </div>
-          <div class="absolute rounded-l-md px-3 py-2 font-medium bg-cyan-100">
-            €
+          <div class="flex border-2">
+            <div class="p-2 bg-cyan-100">€</div>
+            <input
+              type="number"
+              placeholder="300,000"
+              class="w-[90%] py-1 px-2 text-xl font-medium text-sky-900 rounded-b-lg rounded-t-lg"
+            />
           </div>
-          <input
-            type="number"
-            placeholder="300,000"
-            class="border-2 w-[90%] py-1 px-9 text-xl font-medium text-sky-900 rounded-b-lg rounded-t-lg"
-          />
-          <div class="flex">
+          <div class="flex gap-2">
             <div>
               <div class="mt-4 text-slate-500 font-medium mb-1">
                 Mortgage Term
               </div>
-              <div
-                class="absolute px-3 py-2 font-medium bg-cyan-100 ml-16 rounded-r"
-              >
-                years
+              <div class="flex border-2">
+                <input
+                  type="number"
+                  placeholder="25"
+                  class="w-[90%] py-1 px-1 text-xl font-medium text-sky-900 rounded-b-lg rounded-t-lg"
+                />
+                <div class="p-2 bg-cyan-100">years</div>
               </div>
-              <input
-                type="number"
-                placeholder="25"
-                class="border-2 w-[90%] py-1 px-1 text-xl font-medium text-sky-900 rounded-b-lg rounded-t-lg"
-              />
             </div>
             <div>
               <div class="mt-4 text-slate-500 font-medium mb-1">
                 Interest Rate
               </div>
-              <div
-                class="absolute px-3 py-2 font-medium bg-cyan-100 ml-24 rounded-r"
-              >
-                %
+              <div class="flex border-2">
+                <input
+                  type="number"
+                  placeholder="5.25"
+                  class="w-[90%] py-1 px-1 text-xl font-medium text-sky-900 rounded-b-lg rounded-t-lg"
+                />
+                <div class="p-2 bg-cyan-100">%</div>
               </div>
-              <input
-                type="number"
-                placeholder="5.25"
-                class="border-2 w-[90%] py-1 px-1 text-xl font-medium text-sky-900 rounded-b-lg rounded-t-lg"
-              />
             </div>
           </div>
           <div class="text-slate-400 mt-2 mb-2 font-sans font-medium">
@@ -81,7 +79,7 @@
           </button>
         </div>
         <div
-          class="bg-sky-900 w-[50%] h-[70vh] rounded-bl-[50px] px-5 py-4 text-white rounded-e-xl"
+          class="bg-sky-900 md:w-[50%] w-[70%] md:h-[70vh] h-[60jvh] md:rounded-bl-[50px] px-5 py-4 text-white md:rounded-e-xl"
         >
           <h4 class="text-3xl">Your results</h4>
           Your results are shown below based on the information you provided. To
